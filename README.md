@@ -1,6 +1,10 @@
 Online JavaScript Game Store Plan
 =================================
 
+## NOTE: ##
+
+This was a school project.
+
 ## Team: ##
 
 * 475758 Lauri Telama
