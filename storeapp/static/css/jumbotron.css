@@ -1,0 +1,42 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+#login-status {
+    float: right;
+}
+
+#logout-button {
+    margin-left: 2cm;
+}
+
+#home-title {
+    font-size: 300%;
+}
+
+#name {
+    width: 30%;
+}
+
+#search {
+    width: 25%;
+    margin-bottom: 20px;
+}
+
+form li {
+  list-style-type: none;
+}
+
+.numberlist {
+    list-style-type: decimal;
+}
+
+#iframe-div {
+  padding-bottom: 40%;
+}
+
+.no-bottom-padding {
+    display: inline;
+}

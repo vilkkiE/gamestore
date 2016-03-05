@@ -1,0 +1,7 @@
+{% if games.count > 0 %}
+    {% for game in games %}
+        <li><a href="/games/{{game.id}}/">{{game.name}}</a></li>
+    {% endfor %}
+{% else %}
+    <li>There are no games with a name like that!</li>
+{% endif %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 id="home-title">Welcome to JavaScript Gamestore</h2>
+    <h3>The home to countless quality games.<br>
+        You can easily register as a player and start gaming!<br>
+        If you are a developer you can add your games to our store for players to buy!</h3>
+    <h2>Top 5 games</h2>
+    <ol>
+        {% if games_list %}
+            {% for game in games_list %}
+                <li class="numberlist"><a href="/games/{{game.id}}/"><h4>{{game.name}}</h4></a></li>
+            {% endfor %}
+        {% endif %}
+    </ol>
+    <a href="/games/">Browse all games >></a>
+{% endblock %}

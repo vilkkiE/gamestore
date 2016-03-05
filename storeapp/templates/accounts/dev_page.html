@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Hello, {{user.get_username}}.</h1>
+    <h2>Profile information</h2>
+    <h4 class="no-bottom-padding">Username:</h4>
+    <p>{{user.username}}</p>
+    <h4 class="no-bottom-padding">Name:</h4>
+    <p>{{user.get_full_name}}</p>
+    <h4 class="no-bottom-padding">Email:</h4>
+    <p>{{user.email}}</p>
+    <h4 class="no-bottom-padding">IBAN:</h4>
+    <p>{{dev.iban}}</p>
+    {% if user.has_usable_password %}
+        <a class="btn btn-default" href="change_password/" role="button">Change password</a>
+    {% endif %}
+    {% if messages %}
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                {% for message in messages %}
+                    {% if message.tags == "success" %}
+                        <p class="alert alert-success">{{ message }}</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+    <h2>Here are your games:</h2>
+    {% if games %}
+        <ul>
+        {% for game in games %}
+            <li><a href="games/{{game.id}}/"> {{game.name}} </a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <h3>You haven't added any games yet!</h3>
+    {% endif %}
+    <a class="btn btn-default" href="add/" role="button">Add game</a>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{game.name}}</h2>
+    <h4>URL:<p>{{game.url}}</p></h4>
+    <h4>Genre:<p>{{ game.genre }}</p></h4>
+    <h4>Price:<p>{{game.price}}€</p></h4>
+    <h4>Sold:<p>{{game.sold}}</p></h4>
+    <h4>Last sold:
+    {% for t in transactions %}
+      <p>{{t.date}}</p>
+    {% endfor %}
+    </h4>
+    <a class="btn btn-default" href="edit/" role="button">Edit</a>
+    {% if game.active %}
+        <h4>If you want to deactivate the game, i.e. remove it from the store, press the button below</h4>
+        <a class="btn btn-default" href="deactivate/" role="button">Deactivate</a>
+    {% else %}
+        <h4>This game is DEACTIVATED!</h4>
+        <a class="btn btn-default" href="reactivate/" role="button">Reactivate</a>
+    {% endif %}
+{% endblock %}

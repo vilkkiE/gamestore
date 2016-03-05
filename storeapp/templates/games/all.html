@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load genre_filter %}
+{% load static %}
+
+{% block content %}
+<script language="JavaScript" type="text/javascript" src="{% static '/static/js/jquery.min.js' %}"></script>
+<script src="{% static '/static/js/search.js' %}"></script>
+<h1> All games </h1>
+{% csrf_token %}
+<div id="search-div">
+    <input type="text" id="search" name="search" class="form-control" placeholder="Search" />
+    <ul id="search-results">
+
+    </ul>
+</div>
+<div>
+{% for genre in genres %}
+    <h3>{{ genre.1 }}</h3>
+    <div class="container-fluid">
+      {% for game in games_list %}
+        {% if game|has_genre:genre.0 %}
+        <div class="row">
+            <div class="col-md-4">
+                <h4><a href="/games/{{game.id}}/">{{game.name}}</a></h4>
+            </div>
+            <br>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

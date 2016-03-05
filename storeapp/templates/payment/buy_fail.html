@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<script language="JavaScript" type="text/javascript" src="{% static '/static/js/jquery.min.js' %}"></script>
+<script src="{% static '/static/js/payment_info.js' %}"></script>
+<h3>Payment failed.</h3>
+<h4> <a id="link" href="/games/{{game_id}}/">Back to game page.</a></h4>
+{% endblock %}

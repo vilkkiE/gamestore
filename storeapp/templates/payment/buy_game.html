@@ -1,0 +1,18 @@
+{% load static %}
+
+{% block content %}
+
+<script language="JavaScript" type="text/javascript" src="{% static '/static/js/jquery.min.js' %}"></script>
+<script src="{% static '/static/js/buy_game.js' %}"></script>
+<form id="payment_form" action="http://payments.webcourse.niksula.hut.fi/pay/" method="POST">
+  <input type="hidden" name="pid" value={{pid}}>
+  <input type="hidden" name="sid" value="eelajoo">
+  <input type="hidden" name="amount" value={{amount}}>
+  <input type="hidden" name="success_url" value="http://morning-hollows-34668.herokuapp.com/buy_success/">
+  <input type="hidden" name="cancel_url" value="http://morning-hollows-34668.herokuapp.com/buy_cancel/">
+  <input type="hidden" name="error_url" value="http://morning-hollows-34668.herokuapp.com/buy_fail/">
+  <input type="hidden" name="checksum" value={{checksum}}>
+  <input type="hidden" name="dev" value="true">
+</form>
+
+{% endblock %}

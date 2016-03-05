@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Please write a username to create your account</h2>
+    <form action="/complete/facebook/" method="post">{% csrf_token %}
+        {% for field in form %}
+            {% if field.errors %}
+                <div class="form-group">
+                    <label>{{ field.label }}</label>
+                    {{ field }}
+                    <span class="help-inline">
+                        {% for error in field.errors %}{{ error }}{% endfor %}
+                    </span>
+                    {% if field.help_text %}
+                        <p class="help-inline"><small>{{ field.help_text }}</small></p>
+                    {% endif %}
+                </div>
+            {% else %}
+                <div class="form-group">
+                    <label>{{ field.label }}</label>
+                    {{ field }}
+                    {% if field.help_text %}
+                        <p class="help-inline"><small>{{ field.help_text }}</small></p>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+{% endblock %}
