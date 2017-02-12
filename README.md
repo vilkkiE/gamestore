@@ -7,9 +7,9 @@ This was a school project.
 
 ## Team: ##
 
-* 475758 Lauri Telama
-* 478917 Joona Haavisto
-* 428077 Eetu Vilkki
+* Lauri Telama
+* Joona Haavisto
+* Eetu Vilkki
 
 ## Goal: ##
 
@@ -22,9 +22,7 @@ Three essential goals we strive to complete are strong security, high quality an
 
 The project will be done by using JavaScript, JQuery, HTML and CSS with Bootstrap library. In the backend we will use Django.
 
-### Planned features: ###
-
-We are planning to fulfill all the mandatory requirements. We will initially focus on doing the following features well before moving onto the extra features.
+### Features: ###
 
 User registration/login/logout (both as player and developer)
 
@@ -44,7 +42,7 @@ Basic developer functionalities
 
 * Add a game (URL) and setting its price. Allow its removal and modification.
 * Basic game inventory and sales statistics (with graphs etc)
-* Security restrictions. Developers are only allowed to (add/remove/modify) their own games. Devs can only add games to their own                    inventory etc.
+* Security restrictions. Developers are only allowed to (add/remove/modify) their own games. Devs can only add games to their own inventory etc.
 
 Game/service interaction
 
@@ -63,93 +61,20 @@ Quality of Work
   * User interface is intuitive and pleasant to look at
   * We will also use and test the app ourselves a lot to reduce bugs and ensure that it is genuinely functional
 
-### Planned additional features: ###
-
-We are only doing these once we are confident in the quality and security of the mandatory features. These are prioritized in the following order.
+### Additional features: ###
 
 1. Players are able to save and load games with the simple message protocol described in Game Developer Information
 2. Players and developers are able to login also with Facebook
 3. Social media sharing (in Facebook) with advertising in mind
-4. Developing our own simple JavaScript game
-5. Mobile friendly
+4. Mobile friendly
   * The app should be responsive also on mobile phones
   *  Works on different screen sizes and on touch based devices
-
-We are not planning to implement extra features that are not listed in the project description.
-
-### Necessary views: ###
-
-* Home page: domain
-* List of all games: /games
-* List of owned games for players: /users/{id}/games
-* Page where a game can be played: /games/{id}
-* List of developed games for developers: /devs/{id}/games
-* Statistics for each developed game: /devs/{id}/games/{id}
-* Account info page for users: /users/{id}
-* Account info page for devs: /devs/{id}
-* Registration page for users: /register
-* Login page for users: /login
-* Page for adding games to our service: /devs/{id}/add-game
 
 ### Model Structure ###
 
 ![Model Structure](https://git.niksula.hut.fi/vilkkie1/wsd-2015-project/blob/master/wsd-models.png)
 
 If image is not showing look at wsd-models.png in the root of repo.
-
-## Process and Time Schedule: ##
-
-Below is a planned timetable for this project. For each feature, we have also assigned a risk value. The risk values used are L for low, M for medium and H for high.
-
-Implementation order and risk analysis:
-
-Start date: 04.01.16
-
-1. Creating an initial GUI  > L
-2. User registration, login and logout > L
-3. Developers can add games to their inventory > M
-
-End of week 1
-
-4. Players can buy (payment not yet implemented) and play games > M
-5. Developers can remove and modify their games and set prices for them > L
-
-End of week 2
-
-6. Developers can see statistics of game sales > M
-7. Players can see high scores and record their score > M
-8. Mockup payment service > H
-
-End of week 3
-
-9. Categorizing of games > M
-10. Ability to search for games by their name > M
-11. Polishing and styling of GUI >  H
-
-End of week 4
-
-12. Security restrictions for players > H
-13. Security restrictions for developers > H
-14. Ability to save and load games > M
-
-End of week 5
-
-15. 3rd party login > M
-16. Social media sharing > M
-17. Own game > M
-
-End of week 6
-
-18. Mobile functionalities > H
-19. Finalisation > L
-
-Deadline: 20.02.16
-
-### How we plan to work: ###
-
-For task management we are using Trello. Starting next year we will meet weekly. During the meetings we will decide the tasks that we will do and assign the tasks to each person. Additionally, we will attempt to have a coding session with all of us physically present. We are also using Telegram as a communication tool and will do some individual work outside the meetings.
-
-We will use gitLab as version control.
 
 ## Testing: ##
 
@@ -159,34 +84,6 @@ We will also peer review all code. This has two functions. The first is that it 
 
 The GUI will be extensively user tested. Our own game will be tested with unit tests.
 
-# Point Self-Evaluation #
-
-We mostly completed everything we planned to do. The following is a list of the tasks and the points we feel like we deserve.
-
-Authentication (200/200). We have a proper authentication system using django auth. We also have a working email validation system using Gmail. There is a seperate registeration for Developers and Players.
-
-Basic player functionalities (300/300). Players are able to buy games with the mockup payment system. They are able to play them and interact with the game. There are 2 highscore lists, one global and one the Users own. A user can not have duplicate scores of the same amount of points. This has been implemented on purpose. We also categorize the games and have a responsive search possibility.
-
-Basic developer functionalities (200/200). Developers can add games to the store. There can not be two games with the same url. A Developer can activate /deactivate a game where is dissapears from the store but owners of the game can still play it. Sale amounts are shown to the developer as well as latest transactions.
-
-Game/service interaction(200/200). The highscore list implementation is in the game and the lists update in realtime without having to refresh the page.
-
-Quality of Work (80/100). In general we are confident about the quality of work. There is some repetition and maybe some bubble gum fixes but in general the code is good. We have never done web software development before, so there can be some un-optimal ways of doing stuff, as we are constantly learning.
-
-Non-functional requirements (180/200). We think our original project plan was fairly good and we followed it well. We were constantly looking at our planned timetable and tried to follow it which worked suprisingly well. We have a constant strem of git commits from all members of the group and teamwork went well. We had alot of coding and planning sessions together and had active Telegram communications. We also used trello to record what we were doing. The link to Trello: https://trello.com/b/9uRoYrFs/wsd
-
-## More Features ##
-
-Save/load and resolution feature (100/100). We have a working save/load system so that users can save their games. Also the game can send out a setting message which sets the resolution to a desired value.
-
-3rd party login(100/100) We have a working and well implemented Facebook login system.
-
-Mobile Friendly (50/50) Our website is easy to use on as mobile device and looks great.
-
-Social media sharing (50/50) We are able to share our games on facebook.
-
-In addition we have added a feature where you are able to change your password for your users!
-
 # Sharing Work #
 
 ### Lauri Telama ###
@@ -195,7 +92,7 @@ I did a large part of the authentication and registration forms. I also did the 
 
 ### Eetu Vilkki ###
 
-Eetu did the facebook login and sharing, password change, adding games and changing them, logging in and part of the registration forms. Categorizing games and the search function. Creating the iframe for games as well as Heroku deployment. He also did alot of the templates. Also implemented bootstrap and a majority of the tests.
+Eetu did the facebook login and sharing, password change, adding games and changing them, logging in and part of the registration forms. Categorizing games and the search function. Creating the iframe for games as well as Heroku deployment. He also did many of the templates. Also implemented bootstrap and a majority of the tests.
 
 ### Joona Haavisto ###
 
