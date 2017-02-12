@@ -7,9 +7,9 @@ This was a school project.
 
 ## Team: ##
 
-* 475758 Lauri Telama
-* 478917 Joona Haavisto
-* 428077 Eetu Vilkki
+* Lauri Telama
+* Joona Haavisto
+* Eetu Vilkki
 
 ## Goal: ##
 
