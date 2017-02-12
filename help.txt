@@ -1,2 +1,0 @@
-To create groups:
-python manage.py shell < groups.py
