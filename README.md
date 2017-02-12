@@ -98,16 +98,10 @@ Eetu did the facebook login and sharing, password change, adding games and chang
 
 Implemented the payment service as well as transaction history. He also did quite abit of bug fixing and an original mockup for our homepage / other pages.
 
-# Instructions how to use your application #
+# How to test the application #
 
-The application is also hosted here:
+The application is hosted here:
 
 http://morning-hollows-34668.herokuapp.com/
 
-Note that if you want to run the server locally you need to use the command "python manage.py runserver --insecure" to serve the static files, because debug is set to false in the settings.
-
-There shouldn't be a database in git so you need to create one yourself (with "python manage.py migrate") and then register as a developer and add the test game (URL: http://payments.webcourse.niksula.hut.fi/ ).
-
-Using it is quite simple. You can sign in with Facebook or register as a player. If you register as a player you need to activate your email. Then you can login and purchase games. 
-
-NOTE: I deleted the settings.py file because it contained sensitive information about the facebook app and heroku settings so no one can tamper with them. Running the program locally isn't possible, but you can check the code here. Also you can go to the heroku app if you want to try the website out.
+Feel free to try it out.
