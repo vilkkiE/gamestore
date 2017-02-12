@@ -22,9 +22,7 @@ Three essential goals we strive to complete are strong security, high quality an
 
 The project will be done by using JavaScript, JQuery, HTML and CSS with Bootstrap library. In the backend we will use Django.
 
-### Planned features: ###
-
-We are planning to fulfill all the mandatory requirements. We will initially focus on doing the following features well before moving onto the extra features.
+### Features: ###
 
 User registration/login/logout (both as player and developer)
 
@@ -44,7 +42,7 @@ Basic developer functionalities
 
 * Add a game (URL) and setting its price. Allow its removal and modification.
 * Basic game inventory and sales statistics (with graphs etc)
-* Security restrictions. Developers are only allowed to (add/remove/modify) their own games. Devs can only add games to their own                    inventory etc.
+* Security restrictions. Developers are only allowed to (add/remove/modify) their own games. Devs can only add games to their own inventory etc.
 
 Game/service interaction
 
@@ -63,19 +61,14 @@ Quality of Work
   * User interface is intuitive and pleasant to look at
   * We will also use and test the app ourselves a lot to reduce bugs and ensure that it is genuinely functional
 
-### Planned additional features: ###
-
-We are only doing these once we are confident in the quality and security of the mandatory features. These are prioritized in the following order.
+### Additional features: ###
 
 1. Players are able to save and load games with the simple message protocol described in Game Developer Information
 2. Players and developers are able to login also with Facebook
 3. Social media sharing (in Facebook) with advertising in mind
-4. Developing our own simple JavaScript game
-5. Mobile friendly
+4. Mobile friendly
   * The app should be responsive also on mobile phones
   *  Works on different screen sizes and on touch based devices
-
-We are not planning to implement extra features that are not listed in the project description.
 
 ### Model Structure ###
 
@@ -99,7 +92,7 @@ I did a large part of the authentication and registration forms. I also did the 
 
 ### Eetu Vilkki ###
 
-Eetu did the facebook login and sharing, password change, adding games and changing them, logging in and part of the registration forms. Categorizing games and the search function. Creating the iframe for games as well as Heroku deployment. He also did alot of the templates. Also implemented bootstrap and a majority of the tests.
+Eetu did the facebook login and sharing, password change, adding games and changing them, logging in and part of the registration forms. Categorizing games and the search function. Creating the iframe for games as well as Heroku deployment. He also did many of the templates. Also implemented bootstrap and a majority of the tests.
 
 ### Joona Haavisto ###
 
